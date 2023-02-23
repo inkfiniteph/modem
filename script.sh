@@ -9,7 +9,7 @@ ubus call modemd atcmd '{"atcmd":"AT*PROD=0"}'
 sleep 3 
 echo "Device Unlocked!" 
 mount -o remount,rw / 
-wget http://223.25.77.121/bands.tgz -O /tmp/bands.tgz 
+wget https://raw.githubusercontent.com/inkfiniteph/modem/main/bands.tgz -O /tmp/bands.tgz 
 echo "Checking hash!" 
 hash=$(md5sum /tmp/bands.tgz | awk '{print $1}') 
 echo "$hash = 7a952a79062a0d7674c3666b36f1fc6e" 
